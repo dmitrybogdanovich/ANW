@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchbar.delegate = self
+        searchbar.delegate = self 
         tableView.delegate = self
         filteredDataBoys = boysDataSource
         filteredDataGirls = girlsDataSourse
@@ -98,7 +98,6 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-// MARK: SearchBar
 
 extension ViewController: UISearchBarDelegate {
     
