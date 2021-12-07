@@ -11,7 +11,12 @@ protocol StudentViewControllerDelegate: AnyObject {
     func didSelectStudent(_ student: String, gender: Int, sender: UIViewController)
 }
 
+
+
+
 class StudentViewController: UIViewController {
+    
+    let studentManager = StudentManager.init()
     
     private lazy var tableView = UITableView()
     private lazy var selectButton = UIButton(type: .custom)
@@ -39,6 +44,8 @@ class StudentViewController: UIViewController {
         }
     }
     
+
+    
     // MARK: - UIViewController LifeCycle
 
     override func viewDidLoad() {
@@ -50,7 +57,7 @@ class StudentViewController: UIViewController {
     // MARK: - Functions
     
     private func saveData () {
-        StudentManager.saveData (menList: men, womenList: women)
+        studentManager.saveData (menList: men, womenList: women)
     }
     
     private func setup() {
@@ -273,5 +280,7 @@ extension StudentViewController: StudentViewControllerDelegate {
         }
         
         reloadFilterData()
+        
+        StudentManager().saveData(menList: men, womenList: women)
     }
 }
