@@ -2,7 +2,7 @@
 //  StudentViewController.swift
 //  StudentList
 //
-//  Created by Марина Елисеева on 16.11.21.
+//  Created by Дмитрий Богданович on 16.11.21.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ protocol StudentViewControllerDelegate: AnyObject {
 
 class StudentViewController: UIViewController {
     
-    let studentManager = StudentManager.init()
+    let studentManagerCoreData = StudentManagerCoreData.init()
     
     private lazy var tableView = UITableView()
     private lazy var selectButton = UIButton(type: .custom)
@@ -52,12 +52,14 @@ class StudentViewController: UIViewController {
         super.viewDidLoad()
         setup()
         reloadFilterData()
+        
+      
     }
     
     // MARK: - Functions
     
     private func saveData () {
-        studentManager.saveData (menList: men, womenList: women)
+        studentManagerCoreData.saveData (menList: men, womenList: women)
     }
     
     private func setup() {
@@ -213,13 +215,18 @@ extension StudentViewController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.didSelectStudent(dataSource[indexPath.section][indexPath.row], gender: indexPath.section, sender: self)
+        
         didSelectStudentClosure?(dataSource[indexPath.section][indexPath.row], indexPath.section, self)
-            
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DidSelectStudentNotification"), object: dataSource[indexPath.section][indexPath.row])
     }
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return shouldAddSelectButton
     }
+    
+   
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let nameToDelete = dataSource[indexPath.section][indexPath.row]
@@ -281,6 +288,6 @@ extension StudentViewController: StudentViewControllerDelegate {
         
         reloadFilterData()
         
-        StudentManager().saveData(menList: men, womenList: women)
+        StudentManagerCoreData().saveData(menList: men, womenList: women)
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 struct Student {
     var name: String
     var phone: String
-    var githubURL: String
+
     
     mutating func resetName() {
         name = ""

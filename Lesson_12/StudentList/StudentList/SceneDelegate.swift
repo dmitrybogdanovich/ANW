@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  StudentList
 //
-//  Created by Марина Елисеева on 16.11.21.
+//  Created by Дмитрий Богданович on 16.11.21.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         vc.shouldAddSelectButton = true
         vc.shouldAddSearchBar = true
         
-        let studentManager = StudentManager ()
+        let studentManager = StudentManagerCoreData ()
         vc.men = studentManager.readMenList ()
         vc.women = studentManager.readWomenList ()
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C39EA552767B2DB00424D9F /* StudentManagerCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C39EA532767B2DB00424D9F /* StudentManagerCoreData.xcdatamodeld */; };
 		2C5FE716275E895200AC450E /* StudentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FE715275E895200AC450E /* StudentManager.swift */; };
 		CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB3FE2744258900A7510F /* AppDelegate.swift */; };
 		CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4002744258900A7510F /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C39EA542767B2DB00424D9F /* StudentManagerCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentManagerCoreData.xcdatamodel; sourceTree = "<group>"; };
 		2C5FE715275E895200AC450E /* StudentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentManager.swift; sourceTree = "<group>"; };
 		CC1CB3FB2744258900A7510F /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1CB3FE2744258900A7510F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				D29758EE275387E800D2A483 /* DataSource.swift */,
 				CC1CB438274AB48E00A7510F /* StudentCell.swift */,
 				CC1CB4072744259000A7510F /* Assets.xcassets */,
+				2C39EA532767B2DB00424D9F /* StudentManagerCoreData.xcdatamodeld */,
 				CC1CB4092744259000A7510F /* LaunchScreen.storyboard */,
 				CC1CB40C2744259000A7510F /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 				CC1CB4032744258900A7510F /* StudentViewController.swift in Sources */,
 				CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */,
 				D29758EF275387E800D2A483 /* DataSource.swift in Sources */,
+				2C39EA552767B2DB00424D9F /* StudentManagerCoreData.xcdatamodeld in Sources */,
 				CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C39EA532767B2DB00424D9F /* StudentManagerCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C39EA542767B2DB00424D9F /* StudentManagerCoreData.xcdatamodel */,
+			);
+			currentVersion = 2C39EA542767B2DB00424D9F /* StudentManagerCoreData.xcdatamodel */;
+			path = StudentManagerCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC1CB3F32744258900A7510F /* Project object */;
 }
